@@ -32,6 +32,13 @@ body {
 	*/
 	font-family: 'Lato', sans-serif;
 	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+
+	#body {
+		width: 100%;
+		height: 100%;
+	}
 
 	a {
 		color: inherit;
@@ -106,7 +113,64 @@ body {
 	}
 
 	/*
-	* SIGNUP
+	* SIGNUP / LOGIN
 	*/
-	
+	#signup-login-container {
+		width: 100%;
+		height: 100%;
+		background-color: $orange;
+		padding: 20px;
+
+		#head {
+
+		}
+
+		#signup-login-content {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 10px;
+
+			h1 {
+				font-weight: lighter;
+				color: white;
+				text-transform: uppercase;
+			}
+
+			#signup,
+			#login {
+				color: white;
+
+				input,
+				label {
+					display: block;
+					padding: 15px;
+					width: 100%;
+				}
+
+				label {
+					padding: 10px 0 0;
+					margin: 0;
+					font-weight: lighter;
+					text-transform: uppercase;
+				}
+
+				input:not([type='submit']) {
+					border: none;
+					background-color: darken($orange, 10%);
+
+					&:active,
+					&:focus {
+						border: none;
+						outline: none;
+					}
+				}
+
+				input[type='submit'] {
+					border: none;
+					background-color: darken($orange, 25%);
+					color: white;
+				}
+			}
+		}
+	}
 }

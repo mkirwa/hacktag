@@ -10,6 +10,7 @@ var Hacker = new keystone.List('Hacker');
 
 Hacker.add({
 	name: { type: Types.Name, required: true, index: true },
+	username : { type: Types.Text, required: true, index: true, initial: true },
 	email: { type: Types.Email, initial: true, required: true, index: true },
 	password: { type: Types.Password, initial: true, required: true }
 }, 'Permissions', {

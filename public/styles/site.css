@@ -4924,9 +4924,17 @@ html, body {
 	*/
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   /*
 	* HEADER HOME
+	*/
+  /*
+	* SIGNUP / LOGIN
 	*/ }
+  html #body, body #body {
+    width: 100%;
+    height: 100%; }
   html a, body a {
     color: inherit; }
   html header, body header {
@@ -4972,3 +4980,37 @@ html, body {
           padding: 5px 10px; }
         html header .top-nav-top .menu-container.show, body header .top-nav-top .menu-container.show {
           top: 97px; }
+  html #signup-login-container, body #signup-login-container {
+    width: 100%;
+    height: 100%;
+    background-color: #ffaa4b;
+    padding: 20px; }
+    html #signup-login-container #signup-login-content, body #signup-login-container #signup-login-content {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 10px; }
+      html #signup-login-container #signup-login-content h1, body #signup-login-container #signup-login-content h1 {
+        font-weight: lighter;
+        color: white;
+        text-transform: uppercase; }
+      html #signup-login-container #signup-login-content #signup, html #signup-login-container #signup-login-content #login, body #signup-login-container #signup-login-content #signup, body #signup-login-container #signup-login-content #login {
+        color: white; }
+        html #signup-login-container #signup-login-content #signup input, html #signup-login-container #signup-login-content #signup label, html #signup-login-container #signup-login-content #login input, html #signup-login-container #signup-login-content #login label, body #signup-login-container #signup-login-content #signup input, body #signup-login-container #signup-login-content #signup label, body #signup-login-container #signup-login-content #login input, body #signup-login-container #signup-login-content #login label {
+          display: block;
+          padding: 15px;
+          width: 100%; }
+        html #signup-login-container #signup-login-content #signup label, html #signup-login-container #signup-login-content #login label, body #signup-login-container #signup-login-content #signup label, body #signup-login-container #signup-login-content #login label {
+          padding: 10px 0 0;
+          margin: 0;
+          font-weight: lighter;
+          text-transform: uppercase; }
+        html #signup-login-container #signup-login-content #signup input:not([type='submit']), html #signup-login-container #signup-login-content #login input:not([type='submit']), body #signup-login-container #signup-login-content #signup input:not([type='submit']), body #signup-login-container #signup-login-content #login input:not([type='submit']) {
+          border: none;
+          background-color: #ff9218; }
+          html #signup-login-container #signup-login-content #signup input:not([type='submit']):active, html #signup-login-container #signup-login-content #signup input:not([type='submit']):focus, html #signup-login-container #signup-login-content #login input:not([type='submit']):active, html #signup-login-container #signup-login-content #login input:not([type='submit']):focus, body #signup-login-container #signup-login-content #signup input:not([type='submit']):active, body #signup-login-container #signup-login-content #signup input:not([type='submit']):focus, body #signup-login-container #signup-login-content #login input:not([type='submit']):active, body #signup-login-container #signup-login-content #login input:not([type='submit']):focus {
+            border: none;
+            outline: none; }
+        html #signup-login-container #signup-login-content #signup input[type='submit'], html #signup-login-container #signup-login-content #login input[type='submit'], body #signup-login-container #signup-login-content #signup input[type='submit'], body #signup-login-container #signup-login-content #login input[type='submit'] {
+          border: none;
+          background-color: #cb6b00;
+          color: white; }

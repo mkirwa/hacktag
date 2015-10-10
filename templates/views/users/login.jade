@@ -1,0 +1,18 @@
+extends ../../layouts/noheader
+
+block content
+	#signup-login-container
+		#head
+			
+		#signup-login-content
+			h1 Login
+			form#login(method='post')
+				input(type='hidden', name='action', value='hacker.login')
+				.form-group
+					label(for='email') email
+					input#email(type='email', name='email')
+				.form-group.fifty
+					label(for='password') password
+					input#password(type='password', name='password')
+				.form-group
+					input(type='submit', value='login')

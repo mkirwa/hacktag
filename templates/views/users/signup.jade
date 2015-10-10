@@ -3,7 +3,26 @@ extends ../../layouts/noheader
 block content
 	#signup-container
 		#head
-		
+			
 		#signup-content
-	
-		
+			h1 Create Account
+			form#signup(method='post')
+				input(type='hidden', name='action', value='hacker.signup')
+				.form-group.fifty
+					label(for='first') first
+					input#first(type='text', name='name.first')
+					label(for='last') last
+					input#last(type='text', name='name.last')
+				.form-group
+					label(for='username') username
+					input#username(type='text', name='username')
+				.form-group
+					label(for='email') email
+					input#email(type='email', name='email')
+				.form-group.fifty
+					label(for='password') password
+					input#password(type='password', name='password')
+					label(for='password_confirm') confirm
+					input#password_confirm(type='password', name='password_confirm')
+				.form-group
+					input(type='submit', value='submit')
