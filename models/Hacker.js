@@ -14,7 +14,12 @@ Hacker.add({
 	username : { type: Types.Text, required: true, index: true, initial: true },
 	email: { type: Types.Email, initial: true, required: true, index: true },
 	password: { type: Types.Password, initial: true, required: true },
-	token: { type: String, restEditable: true }
+	contacts: { type: Types.Relationship, ref: 'Hacker', many: true },
+	accounts: {
+		github: { type: Types.Url, label: 'Github' }
+	},
+	token: { type: String, restEditable: true },
+	slug: { type: Types.Text }
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Can access Keystone', index: true, default: false }
 });
@@ -22,6 +27,11 @@ Hacker.add({
 // Provide access to Keystone
 Hacker.schema.virtual('canAccessKeystone').get(function() {
 	return this.isAdmin;
+});
+
+Hacker.schema.pre('save', function(next) {
+	this.slug = [this.name.first, this.name.last].join('-').toLowerCase();
+	next();
 });
 
 

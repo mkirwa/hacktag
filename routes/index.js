@@ -36,6 +36,7 @@ exports = module.exports = function(app) {
 
 	// Views
 	app.get('/', routes.views.index);
+	//app.all('/hacker/:id/:slug', routes.views.users.hacker);
 	app.all('/signup', routes.views.users.signup);
 	app.all('/login', routes.views.users.login);
 
